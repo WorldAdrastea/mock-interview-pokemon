@@ -87,13 +87,16 @@ export default function MainView() {
                         
                         {pokemonData ? (
                             <div>
-                                <h2 style={{ 
+                                <h2 
+                                    style={{ 
                                         color: pokemonData.is_legendary ? 'gold' : 'black',
                                         fontFamily: pokemonData.is_legendary ? 'Hollow' : 'Solid',
-                                        }}>
+                                        }}
+                                    data-testid="pokemon-name"
+                                >
                                     {pokemonData.name ? (pokemonData.name.charAt(0).toUpperCase() + pokemonData.name.slice(1)) : "Invalid Pokemon Name"}</h2>
-                                <p>Description: {pokemonData.description}</p>
-                                <p>Is Legendary? {pokemonData.is_legendary ? "Yes" : "No"}</p>
+                                <p data-testid="description">Description: {pokemonData.description}</p>
+                                <p data-testid="legendary-label">Is Legendary? {pokemonData.is_legendary ? "Yes" : "No"}</p>
                             </div>
                         ) : (
                             <p>Pokemon not found.</p>

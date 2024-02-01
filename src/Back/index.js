@@ -1,6 +1,6 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const pokemonRoutes = require('./routes/pokemon');
+import express from 'express';
+import bodyParser from 'body-parser';
+import pokemonRoutes from './routes/pokemon';
 
 
 
@@ -16,3 +16,5 @@ app.use('/pokemon', pokemonRoutes);
 app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`)
 });
+
+module.exports = app;
