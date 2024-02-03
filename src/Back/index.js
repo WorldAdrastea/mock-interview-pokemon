@@ -1,6 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import pokemonRoutes from './routes/pokemon';
+import pokemonRoutes from './routes/pokemon.js';
 
 
 
@@ -17,4 +17,4 @@ app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`)
 });
 
-module.exports = app;
+export default app;

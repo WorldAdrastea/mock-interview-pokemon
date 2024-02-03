@@ -22,17 +22,42 @@ test('handles search and displays results', async () => {
 
     // Wait for the component to update and assertions to complete
     await waitFor(() => {
-        // Check if the expected content is rendered after the search
         expect(screen.getByTestId('pokemon-name')).toBeInTheDocument();
     });
 
     await waitFor(() => {
-        // Check if the expected content is rendered after the search
         expect(screen.getByTestId('legendary-label')).toBeInTheDocument();
     });
 
     await waitFor(() => {
-        // Check if the expected content is rendered after the search
+        expect(screen.getByTestId('description')).toBeInTheDocument();
+    });
+})
+
+test('handles recent searches', async () => {
+    render(<MainView/>);
+
+    await userEvent.type(screen.getAllByPlaceholderText('Enter Pokemon Name'), 'charizard');
+
+    await userEvent.click(screen.getByText('Search'));
+
+    await waitFor(() => {
+        expect(screen.getAllByTestId('pokemon-name')).toBeInTheDocument();
+    });
+
+    const lastSearchedPokemon = screen.getAllByRole('button', { name: /Invalid Search/i }).pop().textContent;
+    
+    await userEvent.click(screen.getAllByText(lastSearchedPokemon));
+
+    await waitFor(() => {
+        expect(screen.getByTestId('pokemon-name')).toBeInTheDocument();
+    });
+
+    await waitFor(() => {
+        expect(screen.getByTestId('legendary-label')).toBeInTheDocument();
+    });
+
+    await waitFor(() => {
         expect(screen.getByTestId('description')).toBeInTheDocument();
     });
 })

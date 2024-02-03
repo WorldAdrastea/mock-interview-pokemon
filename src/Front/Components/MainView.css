@@ -24,11 +24,7 @@ ul {
     width: 100%;
 }
 
-.white {
-    background-color: white;
-    height: 50%;
-    width: 100%;
-}
+
 
 .main-wrapper {
     display: flex;
@@ -55,7 +51,8 @@ ul {
     p {
         max-width: 380px;
         padding: 0;
-        margin: 0;
+        margin-top: 10px;
+        margin-bottom: 0;
     }
 }
 
@@ -71,27 +68,91 @@ ul {
     display: flex;
     flex-direction: column;
     text-align: center;
+
+    li {
+        margin-bottom: 5px;
+    }
 }
 
-.recent-container li {
-    margin-bottom: 5px;
+.white {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: 50%;
+    width: 100%;
 }
 
+.isLegend {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Solid';
+    font-size: 36px;
+}
 
 #input {
     background-color: transparent;
     padding: 10px;
     margin-top: 10px;
-    box-shadow: 0 0 15px 4px (0,0,0,0.06);
     border-radius: 10px;
     color: black;
 }
 
 #input:focus {
     color: black;
+    border-radius: 10px;
 }
 
 #search-button {
     margin-top: 10px;
     margin-left: 10px;
+}
+
+#loading {
+    padding: 0;
+    margin: 0;
+}
+
+#recent-text {
+    margin-bottom: 0;
+}
+
+button {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  height: 25px;
+  margin: 0;
+  padding: 10px;
+  position: relative;
+  text-decoration: none;
+  user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+}
+
+button:hover, button:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
 }

@@ -31,4 +31,4 @@ function parsePokemonData(data) {
     };
 }
 
-module.exports = router;
+export default router;

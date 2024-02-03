@@ -19,6 +19,7 @@ export default function MainView() {
             const caseSensitiveInput = pokemonName.toLowerCase();
 
             const response = await fetch(`${backend}/pokemon/${caseSensitiveInput}`)
+            
             const data = await response.json();
 
             console.log('Pokemon Name:', pokemonName);
@@ -104,7 +105,7 @@ export default function MainView() {
                     </div>
                     <div className="recent-container">
                         <div className="recent-searches-wrapper">
-                            <p>Recent Searches:</p>
+                            <p id="recent-text">Recent Searches:</p>
                             {recentSearches.length > 0 && (
                                 <ul>
                                     {recentSearches.slice(0, 5).map((search, index) => (
@@ -121,7 +122,18 @@ export default function MainView() {
                 </div>
             </section>
             <section className="white">
-
+                {pokemonData && (
+                    <>
+                        {pokemonData.is_legendary ? (
+                            <div className="isLegend">
+                                This pokemon is legendary!
+                            </div>
+                        ) : (
+                            <>
+                            </>
+                        )}
+                    </>
+                )}
             </section>
         </main>
     )

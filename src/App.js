@@ -1,6 +1,6 @@
 
 import './App.css';
-import MainView from './Front/Components/MainView';
+import MainView from './Front/Components/MainView.jsx';
 
 function App() {
   return (
