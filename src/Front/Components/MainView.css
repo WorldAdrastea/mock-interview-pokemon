@@ -156,3 +156,28 @@ button:active {
   color: rgba(0, 0, 0, 0.65);
   transform: translateY(0);
 }
+
+@media all and (max-width: 430px) {
+    .red {
+        height: 30%;
+        width: 430px;
+    }
+
+    .main-wrapper {
+        width: 430px;
+
+        .outer-container {
+            width: auto;
+        }
+    }
+    .white {
+        height: 20%;
+        width: 430px;
+        align-items: flex-start;
+
+        .isLegend {
+            font-size: 14px;
+            
+        }
+    }
+}

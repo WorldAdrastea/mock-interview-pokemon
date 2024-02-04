@@ -1,6 +1,6 @@
 {
   "type": "module",
-  "name": "x",
+  "name": "pokemon-search-engine",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -40,7 +40,8 @@
     ]
   },
   "devDependencies": {
-    "supertest": "^6.3.4"
+    "supertest": "^6.3.4",
+    "@babel/plugin-proposal-private-property-in-object": ""
   },
   "jest": {
     "moduleNameMapper": {

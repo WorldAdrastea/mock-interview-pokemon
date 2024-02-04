@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react"
 import './MainView.css'
 
-
 export default function MainView() {
     const [pokemonName, setPokemonName] = useState("");
     const [pokemonData, setPokemonData] = useState(null);
@@ -54,7 +53,6 @@ export default function MainView() {
         if (shouldFetch) {
             fetchData(pokemonName)
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [pokemonName, shouldFetch])
 
     //Event handler for recent searches
@@ -84,8 +82,9 @@ export default function MainView() {
                             />
                             <button onClick={fetchData} id="search-button"> Search </button>
                         </div>
+                        {/* When fetching shows "Loading..." and disappears when fetch is complete with no errors */}
                         {loading && <p id="loading">Loading...</p>}
-                        
+                        {/* When pokemon has been searched shows pokemon name, description and if it is legendary and if true, name will be gold. If no pokemon is found then it will be invalid */}
                         {pokemonData ? (
                             <div>
                                 <h2 
@@ -106,11 +105,12 @@ export default function MainView() {
                     <div className="recent-container">
                         <div className="recent-searches-wrapper">
                             <p id="recent-text">Recent Searches:</p>
+                            {/* If at least one search has been made, displays the recent search as a button and if clicked with perform the search */}
                             {recentSearches.length > 0 && (
                                 <ul>
                                     {recentSearches.slice(0, 5).map((search, index) => (
                                         <li key={index}>
-                                            <button onClick={() => handleRecentSearchClick(search)}>
+                                            <button data-testid="recent-search" onClick={() => handleRecentSearchClick(search)}>
                                                 {search.charAt(0).toUpperCase() + search.slice(1)  || "Invalid Search"}
                                             </button>
                                         </li>
@@ -124,6 +124,7 @@ export default function MainView() {
             <section className="white">
                 {pokemonData && (
                     <>
+                        {/* If the pokemon is legendary, text will display at the bottom */}
                         {pokemonData.is_legendary ? (
                             <div className="isLegend">
                                 This pokemon is legendary!

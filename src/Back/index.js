@@ -2,8 +2,6 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import pokemonRoutes from './routes/pokemon.js';
 
-
-
 //Initialize express
 const app = express();
 const PORT = 8080;
