@@ -1,7 +1,15 @@
 # mock-interview-pokemon
 ## How to get started
 
+Ensure you have Node version 21.5.0 and Npm version 10.2.4 and then clone thise repository.
 
+You can then run ```npm install``` to install all the dependencies.
+
+You can start the project locally with ```npm run start```
+
+You can create a production build with ```npm run build```
+
+To run the test cases, you can use ```npm run test```
 
 ## Q & A
 ### Which parts are you most proud of? Why?
