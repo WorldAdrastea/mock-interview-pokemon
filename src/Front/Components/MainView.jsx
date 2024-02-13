@@ -53,6 +53,7 @@ export default function MainView() {
         if (shouldFetch) {
             fetchData(pokemonName)
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [pokemonName, shouldFetch])
 
     //Event handler for recent searches
