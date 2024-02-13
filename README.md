@@ -18,7 +18,7 @@ The recent searches feature is something I'm most proud of because I have never 
 
 ### Where did you spend more time? What was the most difficult?
 
-I spent the most time between the recent searches feature and writing the tests for the application. I believe these were the most difficult for me simply because I spent the most time working on them, which is due to a lack of previous experience with them.
+I spent the most time between the recent searches feature and writing the tests for the application. I believe these were the most difficult for me simply because I spent the most time working on them and there is a test that doesn't work, which is due to a lack of previous experience with them.
 
 
 ### How did you find the test overall? Did you have issues or difficulties completing?
